@@ -21,6 +21,7 @@ wss.on('connection', (ws) => {
   console.log(ws);
   ws.on('message', (rawData) => {
     const data = JSON.parse(rawData.toString());
+
     console.log(data);
 
     switch (data.event) {
